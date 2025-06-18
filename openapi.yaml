@@ -1,0 +1,30 @@
+openapi: 3.0.0
+info:
+  title: RealTime Clock Plugin
+  description: Get the current time in Odense (Europe/Copenhagen) using a local Flask backend
+  version: "1.0.0"
+servers:
+  - url: http://localhost:5000
+paths:
+  /timezone/Europe/Copenhagen:
+    get:
+      summary: Get current time in Odense (CEST)
+      operationId: getCopenhagenTime
+      responses:
+        '200':
+          description: Current time details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  datetime:
+                    type: string
+                    format: date-time
+                    description: ISO8601-formatted current time
+                  timezone:
+                    type: string
+                  unixtime:
+                    type: integer
+                  utc_offset:
+                    type: string

@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "RealTime Clock",
+  "name_for_model": "getCopenhagenTime",
+  "description_for_human": "Get accurate current time in Odense (CEST) with sync check.",
+  "description_for_model": "Plugin to retrieve current local time in Odense (Europe/Copenhagen) and compare with system time.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5000/openapi.yaml"
+  },
+  "logo_url": "http://localhost:5000/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://example.com/legal"
+}
